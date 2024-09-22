@@ -1,0 +1,251 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style-type: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Upcoming Events Section */
+.upcoming-events {
+    background-image: url('images/your_background_image_filter2.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.upcoming-background h2.sticker {
+    font-family: 'Georgia', serif;
+    font-size: 75px; /* Extra large size */
+    color: #333;
+    padding: 10px 20px;
+    background-color: #ffeb3b;
+    border: 2px solid #333;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Recent Events Section */
+.recent-events {
+    position: relative;
+    background-image: url('images/your_background_image_dark.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0; /* Remove padding to fill space */
+}
+
+.event-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recent-event-container {
+    display: flex;
+    overflow: hidden;
+}
+
+.recent-event-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    margin: 0 10px; /* Space between cards */
+    opacity: 0; /* Initially hidden for animation */
+    transform: translateY(20px); /* Slight slide down */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.recent-event-card .actions {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.recent-event-card img {
+    width: 100%;
+    height: 200px; /* Adjusted height for larger cards */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.recent-event-card h3 {
+    font-size: 24px; /* Larger title */
+    margin: 10px 0;
+}
+
+.recent-event-card p {
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.recent-event-card button {
+    padding: 12px 25px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.recent-event-card button:hover {
+    background-color: #555;
+}
+
+/* Event Filter Section */
+.filter-section {
+    padding: 100px 0; /* Add space above and below */
+    text-align: center;
+    background-image: url('images/your_background_image_filter2.jpg'); /* Background image */
+}
+
+.filter-section h2.sticker {
+    font-family: 'Georgia', serif;
+    font-size: 48px; /* Extra large size */
+    color: #333;
+    padding: 10px 20px;
+    background-color: #0bd7ee;
+    border: 2px solid #333;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px; /* More space below title */
+}
+
+/* Event Type Buttons */
+.event-type {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Increased gap between buttons */
+}
+
+.event-type button {
+    padding: 20px 40px; /* Large button size */
+    background-color: #070000;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 24px; /* Larger font size */
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.event-type button:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+/* Event Listings Section */
+.event-listings {
+    position: relative;
+    padding: 0; /* No padding to fill space */
+    background-image: url('images/your_background_image_dark.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.event-listings .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Adds space between each event card */
+}
+
+/* Event Cards */
+.event-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    padding: 20px;
+    opacity: 0; /* Initially hidden for animation */
+    transform: translateY(20px); /* Slight slide down */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.event-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.event-card h3 {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.event-card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.event-card .actions {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.event-card button {
+    padding: 12px 25px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.event-card button:hover {
+    background-color: #555;
+}
+
+/* Animation for showing cards */
+.show {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide up */
+}
