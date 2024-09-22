@@ -1,0 +1,75 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Event Login & Signup</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Video Background -->
+    <video autoplay muted loop id="bgVideo">
+        <source src="background-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="container">
+        <!-- Your existing login/signup form code goes here -->
+         <!-- Login Form -->
+        <div id="loginForm">
+            <h1>Log In</h1>
+            <div class="input-field">
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="input-field">
+                <input type="password" placeholder="Password">
+            </div>
+            <button class="button">Login</button>
+            <div class="toggle">
+                Don't have an account? <a href="#" onclick="toggleForms()">Sign Up</a>
+            </div>
+        </div>
+
+        <!-- Signup Form (Hidden initially) -->
+        <div id="signupForm" style="display: none;">
+            <h1>Sign Up</h1>
+            <div class="input-field">
+                <input type="text" placeholder="Full Name">
+            </div>
+            <div class="input-field">
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="input-field">
+                <input type="password" placeholder="Password">
+            </div>
+            <button class="button">Sign Up</button>
+            <div class="toggle">
+                Already have an account? <a href="#" onclick="toggleForms()">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleForms() {
+            var loginForm = document.getElementById('loginForm');
+            var signupForm = document.getElementById('signupForm');
+            
+            if (loginForm.style.display === "none") {
+                loginForm.style.display = "block";
+                signupForm.style.display = "none";
+            } else {
+                loginForm.style.display = "none";
+                signupForm.style.display = "block";
+            }
+        }
+    </script>
+    </div>
+
+</body>
+</html>
