@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">EventBooking</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="logout.html">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Upcoming Events Title Section -->
+  <section class="upcoming-events">
+    <div class="upcoming-background">
+      <h2 class="sticker">Upcoming Events</h2>
+    </div>
+  </section>
+
+  <!-- Recent Events Section -->
+  <section class="recent-events">
+    <div class="event-background">
+      <button onclick="scrollRecentEvents(-1)">&#10094;</button>
+      <div class="recent-event-container" id="recent-event-container">
+        <!-- Recent Events will be displayed here -->
+      </div>
+      <button onclick="scrollRecentEvents(1)">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Event Filter Section -->
+  <section class="filter-section">
+    <h2 class="sticker">Select Event Type</h2>
+    <div class="event-type">
+      <button onclick="filterEvents('cultural')">🎭 Cultural</button>
+      <button onclick="filterEvents('sports')">⚽ Sports</button>
+      <button onclick="filterEvents('tech')">💻 Tech</button>
+    </div>
+  </section>
+
+  <!-- Event Listings Section -->
+  <section class="event-listings">
+    <div class="event-background">
+      <div class="container" id="event-container">
+        <!-- Events will be displayed here -->
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
